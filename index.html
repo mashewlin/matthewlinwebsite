@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Matthew Lin, a materials science and engineering undergraduate at Columbia University. Research in molecular machine learning, simulation, and experimental materials science.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Matthew Lin | Columbia University">
+  <meta property="og:description" content="Undergraduate research in molecular machine learning, simulation, and experimental materials science.">
+  <title>Matthew Lin | Columbia University</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23172923%22%2F%3E%3Cpath%20d%3D%22M14%2043V24h6v3c2-3%207-5%2010-1%204-5%2012-3%2012%204v13h-6V31c0-4-5-3-5%201v11h-6V31c0-4-5-3-5%201v11Z%22%20fill%3D%22%23f7f7f2%22%2F%3E%3Cpath%20d%3D%22M47%2016h5v27h-5Z%22%20fill%3D%22%23b9cce7%22%2F%3E%3C%2Fsvg%3E" type="image/svg+xml">
+  <style>
+:root {
+  color-scheme: light;
+  --ink: #252b32;
+  --muted: #65707b;
+  --link: #28549b;
+  --line: #e2e6ea;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 24px; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  width: min(900px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 58px 0 24px;
+}
+
+h1, h2, h3, p { margin: 0; }
+h1, h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.25;
+}
+h1 { font-size: 42px; letter-spacing: -1px; }
+h2 { font-size: 28px; margin-bottom: 24px; }
+h3 { font-size: 17px; font-weight: 600; line-height: 1.5; }
+sub { font-size: .72em; line-height: 0; }
+
+a { color: var(--link); text-decoration: none; text-underline-offset: 3px; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; border-radius: 1px; }
+::selection { background: #dbe8fa; }
+
+.affiliation { margin-top: 12px; color: #505b67; font-size: 16px; line-height: 1.65; }
+.profile-links { display: flex; flex-wrap: wrap; gap: 22px; padding: 0; margin: 17px 0 0; list-style: none; font-size: 14px; }
+.section-nav { display: flex; flex-wrap: wrap; gap: 12px 27px; margin-top: 30px; padding: 15px 0; border-block: 1px solid var(--line); font-size: 14px; }
+.section-nav a { color: #48525d; }
+.section-nav a:hover { color: var(--link); }
+
+main { padding-top: 32px; }
+.introduction { max-width: 840px; margin: 0 0 27px; }
+main > section { margin-top: 43px; }
+main > section:first-of-type { margin-top: 0; }
+.research-entry { margin-top: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--line); }
+.research-entry:first-of-type { margin-top: 0; }
+.research-entry:last-of-type { padding-bottom: 0; border-bottom: 0; }
+.entry-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px 24px; }
+.entry-heading h3 { flex: 1; }
+.dates { flex-shrink: 0; font-size: 13px; line-height: 1.6; color: var(--muted); }
+.lab { font-size: 13px; line-height: 1.7; color: var(--muted); margin-top: 5px; }
+.research-entry > p:last-child, #activities > p:last-child { margin-top: 9px; }
+
+#publication, #education, #activities, #contact { padding-top: 31px; border-top: 1px solid var(--line); }
+.publication { line-height: 1.8; }
+.publication-links { display: flex; flex-wrap: wrap; gap: 12px 22px; margin-top: 12px; font-size: 14px; }
+.degree { margin-top: 4px; font-size: 15px; }
+#contact h2 { margin-bottom: 15px; }
+
+footer { display: flex; justify-content: space-between; gap: 20px; margin-top: 48px; padding-top: 19px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.skip-link { position: fixed; left: 20px; top: 12px; z-index: 10; padding: 9px 16px; background: #fff; border: 1px solid var(--link); transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 720px) {
+  .page { width: calc(100% - 48px); padding-top: 36px; }
+  .entry-heading { display: block; }
+  .dates { margin-top: 4px; }
+  .lab { margin-top: 5px; }
+}
+
+@media (max-width: 420px) {
+  body { font-size: 15px; }
+  .page { width: calc(100% - 40px); padding-top: 29px; }
+  h1 { font-size: 36px; }
+  h2 { font-size: 26px; margin-bottom: 20px; }
+  h3 { font-size: 16px; }
+  .affiliation { font-size: 15px; }
+  .section-nav { gap: 8px 20px; margin-top: 24px; font-size: 13px; }
+  main { padding-top: 28px; }
+  .introduction { margin-block: 0 25px; }
+  main > section { margin-top: 34px; }
+  .research-entry { margin-top: 22px; padding-bottom: 22px; }
+  .publication-links { font-size: 13px; gap: 8px 18px; }
+  #contact a { overflow-wrap: anywhere; }
+  footer { font-size: 11px; }
+}
+
+@media print {
+  body { color: #000; font-size: 11pt; }
+  .page { width: 100%; padding-top: 0; }
+  h1 { font-size: 28pt; }
+  h2 { font-size: 18pt; }
+  h3 { font-size: 12pt; }
+  .section-nav, .skip-link, footer { display: none; }
+  .research-entry, #publication { break-inside: avoid; }
+  main > section { margin-top: 24px; }
+  a { color: #000; }
+}
+
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="profile">
+      <h1>Matthew Lin</h1>
+      <p class="affiliation">Materials Science and Engineering undergraduate<br>Columbia University</p>
+      <ul class="profile-links" aria-label="Profile links">
+        <li><a href="mailto:matthew.lin@columbia.edu">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/matthew-lin-967298300/" target="_blank" rel="noopener">LinkedIn <span class="sr-only">opens in a new tab</span></a></li>
+      </ul>
+      <nav class="section-nav" aria-label="Sections">
+        <a href="#research">Research</a>
+        <a href="#publication">Publication</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Research</h2>
+        <p class="introduction">My research spans molecular machine learning, molecular simulation, and experimental materials science.</p>
+
+        <article class="research-entry" id="ionic-liquids">
+          <div class="entry-heading">
+            <h3>Ionic liquid property prediction</h3>
+            <p class="dates">May 2026 – present</p>
+          </div>
+          <p class="lab">Research Assistant · Nordness Group, Columbia University</p>
+          <p>I’m developing models using AttentiveFP and LightGBM to predict the physical properties of ionic liquids.</p>
+        </article>
+
+        <article class="research-entry" id="co2-adsorption">
+          <div class="entry-heading">
+            <h3>CO<sub>2</sub> adsorption in metal–organic frameworks</h3>
+            <p class="dates">September 2023 – April 2024</p>
+          </div>
+          <p class="lab">Research Assistant · Chen Group, University of Texas Rio Grande Valley</p>
+          <p>I performed Grand Canonical Monte Carlo simulations in RASPA to model CO<sub>2</sub> adsorption in frameworks with open metal sites, and analyzed adsorption isotherms and host–guest interactions. <a href="#publication">Related publication</a>.</p>
+        </article>
+
+        <article class="research-entry" id="sodium-ion-batteries">
+          <div class="entry-heading">
+            <h3>Sodium-ion battery cathodes</h3>
+            <p class="dates">June – July 2024</p>
+          </div>
+          <p class="lab">Research Assistant · Bocarsly Group, University of Houston</p>
+          <p>I experimented with component concentrations and cooling rates, then used X-ray diffraction and battery cycling to study the synthesized cathode materials.</p>
+        </article>
+
+        <article class="research-entry" id="nanoparticles">
+          <div class="entry-heading">
+            <h3>Pore formation in nanoparticles</h3>
+            <p class="dates">June – August 2023</p>
+          </div>
+          <p class="lab">Research Assistant · Uddin Group, University of Texas Rio Grande Valley</p>
+          <p>I studied the effects of hexamethylenetetramine and formaldehyde on nanoparticle pore formation, using X-ray diffraction and scanning electron microscopy to characterize the materials.</p>
+        </article>
+      </section>
+
+      <section id="publication" aria-labelledby="publication-title">
+        <h2 id="publication-title">Publication</h2>
+        <p class="publication">M. Du, A. Rodriguez, <strong>M. Z. Lin</strong>, and H. Chen. A Transferable Force Field for Simulating Adsorption in Metal–Organic Frameworks with Open Metal Sites Based on the 12-6-4 Lennard-Jones Potential. <em>Journal of Chemical Information and Modeling</em> <strong>66</strong>(3), 1704–1714 (2026).</p>
+        <p class="publication-links"><a href="https://doi.org/10.1021/acs.jcim.5c02893" target="_blank" rel="noopener">DOI <span class="sr-only">opens in a new tab</span></a><a href="https://scholarworks.utrgv.edu/pa_fac/857/" target="_blank" rel="noopener">Institutional record <span class="sr-only">opens in a new tab</span></a><a href="data:text/plain;charset=utf-8,%40article%7Bdu2026transferable%2C%0A%20%20author%20%3D%20%7BDu%2C%20Meng%20and%20Rodriguez%2C%20Alan%20and%20Lin%2C%20Matthew%20Z.%20and%20Chen%2C%20Haoyuan%7D%2C%0A%20%20title%20%3D%20%7BA%20Transferable%20Force%20Field%20for%20Simulating%20Adsorption%20in%20Metal--Organic%20Frameworks%20with%20Open%20Metal%20Sites%20Based%20on%20the%2012-6-4%20Lennard-Jones%20Potential%7D%2C%0A%20%20journal%20%3D%20%7BJournal%20of%20Chemical%20Information%20and%20Modeling%7D%2C%0A%20%20year%20%3D%20%7B2026%7D%2C%0A%20%20volume%20%3D%20%7B66%7D%2C%0A%20%20number%20%3D%20%7B3%7D%2C%0A%20%20pages%20%3D%20%7B1704--1714%7D%2C%0A%20%20doi%20%3D%20%7B10.1021%2Facs.jcim.5c02893%7D%2C%0A%20%20url%20%3D%20%7Bhttps%3A%2F%2Fdoi.org%2F10.1021%2Facs.jcim.5c02893%7D%0A%7D%0A" download="publication.bib">BibTeX</a></p>
+      </section>
+
+      <section id="education" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+        <div class="entry-heading"><h3>Columbia University</h3><p class="dates">Expected May 2029</p></div>
+        <p class="degree">BS in Materials Science and Engineering</p>
+      </section>
+
+      <section id="activities" aria-labelledby="activities-title">
+        <h2 id="activities-title">Activities</h2>
+        <div class="entry-heading"><h3>Columbia Space Initiative</h3><p class="dates">September 2026 – present</p></div>
+        <p class="lab">CubeSat member · LIONESS mission</p>
+        <p>I work on thermal simulation using Radian and research suitable satellite coatings.</p>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>New York City, New York<br><a href="mailto:matthew.lin@columbia.edu">matthew.lin@columbia.edu</a></p>
+      </section>
+    </main>
+    <footer><span>© 2026 Matthew Lin</span><a href="#top">Back to top</a></footer>
+  </div>
+</body>
+</html>
